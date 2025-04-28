@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Protegida</title>
+</head>
+<body>
+    <h1>Bienvenido, {{ nombre }}!</h1>
+    <p>Has iniciado sesión correctamente.</p>
+
+    <form action="{{ url_for('logout') }}" method="post">
+        <button type="submit">Cerrar sesión</button>
+    </form>
+    
+</body>
+</html>
