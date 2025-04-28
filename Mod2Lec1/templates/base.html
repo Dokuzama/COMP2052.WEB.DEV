@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Aplicación{% endblock %}</title>
+</head>
+<body>
+    <h1>Mi Aplicación</h1>
+    <nav>
+        <a href="/">Inicio</a> |
+        <a href="/pagina1">Página 1</a> |
+        <a href="/pagina2">Página 2</a>
+    </nav>
+
+    <hr>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
