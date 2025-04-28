@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido, {{ current_user.username }}!</h1>
+
+    <p>Selecciona a dónde quieres ir:</p>
+
+    <ul>
+        <li><a href="{{ url_for('admin') }}">Página de Admin</a></li>
+        <li><a href="{{ url_for('user') }}">Página de Usuario</a></li>
+        <li><a href="{{ url_for('logout') }}">Cerrar sesión</a></li>
+    </ul>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p style="color: red;">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+</body>
+</html>

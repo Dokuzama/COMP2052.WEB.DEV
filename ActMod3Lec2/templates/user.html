@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuario</title>
+</head>
+<body>
+    <h1>Área de Usuario</h1>
+
+    <p>Bienvenido, {{ current_user.username }}. Esta página está disponible para todos los usuarios autenticados.</p>
+
+    <a href="{{ url_for('index') }}">Volver al inicio</a>
+</body>
+</html>
